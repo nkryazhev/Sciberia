@@ -1,0 +1,16 @@
+Instructor / Преподаватель:
+Prof. Steven Hall
+проф. Стивен Холл
+
+MIT Course Number:
+16.06
+
+As Taught In:
+Fall 2012
+
+Level / Уровень:
+Undergraduate
+Базовый
+
+Course Description / Описание курса:
+This course introduces the design of feedback control systems as applied to a variety of air and spacecraft systems. Topics include the properties and advantages of feedback systems, time-domain and frequency-domain performance measures, stability and degree of stability, the Root locus method, Nyquist criterion, frequency-domain design, and state space methods.
