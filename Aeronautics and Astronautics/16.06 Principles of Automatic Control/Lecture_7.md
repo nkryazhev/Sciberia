@@ -24,7 +24,7 @@ The second term is a constant ($\alpha$) times s times $H_0(s)$. Since multiplyi
 $$h(t) = h_0(t) + \alpha \frac{d}{dt} h_0 (t)$$
 
 where $h(t)$ is a step response with zero, and $h_0(t)$ is a step response without the zero.
- 
+
 **Example:**
 
 $$G_0(s) = \frac{1}{s^2 + 2 \zeta s + 1},\;\zeta = 0,5$$
@@ -78,4 +78,3 @@ So, net eﬀect is that addition of the pole will smooth the original step respo
 http://translate.kursomir.ru/book/30/62
 
 Переводчики: nkryazhev
-

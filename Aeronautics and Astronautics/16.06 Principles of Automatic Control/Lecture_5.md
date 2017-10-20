@@ -8,7 +8,7 @@ Usually, we ﬁnd the response of a system using Laplace techniques. Often, do w
 
 Suppose:
 
-\[
+$$
 \begin{align*}
 J &= 0,01\;kg\cdot m^2;\;b=0,001\;N-m-sec \\
 \\
@@ -16,19 +16,19 @@ K_t &= K_e = 1\; n-M/A = 1\; V/(rad/sec)\\
 \\
 R_a &= 10\Omega,\; L= 1\; H
 \end{align*}
-\]
+$$
 
 
 Then
 
-\[
+$$
 \begin{align*}
 \frac{\Omega}{V_a}(s) &= \frac{100}{s^3 + 10,1 s^2 + 101 s}\\
 \frac{\Omega}{V_a} &= \frac{s\Theta}{V_a}(s) = \frac{100s}{s^3 + 10,1 s^2 + 100s}\\
 &= \frac{100}{s^2 + 10,1 s +101}\\
 G(s) &= \frac{100}{(s+5,05 + j 8,6889)(s+5,05 + -j8,6889}
- \end{align*}
- \]
+\end{align*}
+$$
 
 What is the step response of the motor?  That is, what is the velocity of the motor as a function of time, if $v_a (t) = \sigma (t)$?
 
@@ -69,7 +69,7 @@ The transfer function from aileron input (\(\delta_a\)) to roll angle (\(\varphi
 $$\frac{\Phi}{\delta_a}(s) = \frac{k}{s(\tau + 1}$$
 
 \[
-\begin{align*}  
+\begin{align*}
 \text{where} \; k &= \text{steady roll-rate per unit of aileron deﬂection}\\
 \tau &= \text{roll subsidence time constant}\\
 &= \frac{I}{-M_{\phi}}
@@ -80,7 +80,7 @@ $$\frac{\Phi}{\delta_a}(s) = \frac{k}{s(\tau + 1}$$
 Suppose $\delta_a$ is measured in % of full deﬂection, so $\delta_a = 1$ is full right aileron, $\delta_a = -1$ if full left one. Then a typical set of parameters might be
 
 $$
-\begin{align*}  
+\begin{align*}
 k &= 100\; \text{deg/sec}\\
 \tau & = 0,5\; sec\\
 G(s) &= \frac{100}{s(0,5s + 1)}
@@ -93,10 +93,10 @@ _diag_
 
 What is the transfer function of a closed-loop system?
 
-\begin{align*}  
+\begin{align*}
 H(s) &= \frac{KG(s)}{1+KG(s)} = \frac{\dfrac{Kk}{s(\tau s + 1)}}{1 + \dfrac{Kk}{s(\tau s + 1)}}\\
 &= \frac{Kk}{\tau s^2 + s + Kk}
-\end{align*}  
+\end{align*}
 
 Suppose we take $K = 0,1/deg$.
 Then:
