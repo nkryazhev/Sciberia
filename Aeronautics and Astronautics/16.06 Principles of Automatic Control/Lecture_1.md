@@ -1,47 +1,46 @@
-# 16.06 Принципы автоматического управления
-
-## Лекция 1
+<small>16.06 Принципы автоматического управления</small>
 
 
-Важная информация:
+# Лекция 1
 
-* Активное обучение является важной частью занятий. Приходите на занятия готовыми учиться, думать и работать в команде;
-* Учебник: Franklin, Powell, Emami-Naeni, Feedback Control of Dynamic Systems, 5-ое издание.
+### Важная информация:
 
-**Примечание:** Кроме 4-ого издания.
+*   Активное обучение является важной частью занятий. Приходите на занятия готовыми учиться, думать и работать в команде;
+*   Учебник: Franklin, Powell, Emami-Naeni, Feedback Control of Dynamic Systems, 5-ое издание.
 
-Структура итоговой оценки
+**Примечание:** Любой **кроме** 4-ого издания.
 
- * Тест 1 20%
- * Тест 2 20%
- * Финальный  экзамен 30%
- * Домашняя работа 20%
- * Работа на занятиях 5%
- * *Оценки учебного персонала  5%??*
+Структура итоговой оценки:
 
-See collaboration policy. It is NOT same the same as Unified. In particular, it is not allowed to use 
+*   Тест 1 — 20%
+*   Тест 2 — 20%
+*   Финальный  экзамен — 30%
+*   Домашняя работа — 20%
+*   Работа на занятиях — 5%
+*   Оценки учебного персонала —  5%??*
+
+See collaboration policy. It is NOT same the same as Unified. In particular, it is not allowed to use
 solutions from past years from any source.
 
-- Как правило, не сданные вовремя задания,не принимаются.
+*   Как правило, не сданные вовремя задания,не принимаются.
 
-May sometimes have to “look ahead” problems where you need to read material to be able to do the 
+May sometimes have to “look ahead” problems where you need to read material to be able to do the
 problems.
 
-Почему «автоматическое» управление?
+Иногда, чтобы справиться с задачей, вам может потребоваться «забежать» вперед и самим прочитать материал более поздних занятий.
 
-В широком смысле существует две категории (вида) управления:
+### Почему «автоматическое» управление?
 
-* Ручное управление
-* Автоматическое управление
+В широком смысле, существует две категории (вида) управления:
 
-We’ll be discussing automatic control almost exclusively. Automatic control systems can be designed to hold 
+*   Ручное управление
+*   Автоматическое управление
+
+We’ll be discussing automatic control almost exclusively. Automatic control systems can be designed to hold
 an output steady or to track a desired reference signal.
 
-* Regulator: keep output at a steady, known value 
+* Regulator: keep output at a steady, known value
 * Tracking or servo system: Make output track a reference system
 
-Can further categorize control systems as either open-loop or closed-loop. Closed-loop controllers (or feedback 
+Can further categorize control systems as either open-loop or closed-loop. Closed-loop controllers (or feedback
 controllers) compute the control action based on the measured output of the system being controlled.
-
-
-
