@@ -22,7 +22,7 @@
 See collaboration policy. It is NOT same the same as Unified. In particular, it is not allowed to use
 solutions from past years from any source.
 
-*   Как правило, не сданные вовремя задания,не принимаются.
+*   Как правило, не сданные вовремя задания, не принимаются.
 
 May sometimes have to “look ahead” problems where you need to read material to be able to do the
 problems.
@@ -42,5 +42,6 @@ an output steady or to track a desired reference signal.
 * Regulator: keep output at a steady, known value
 * Tracking or servo system: Make output track a reference system
 
-Can further categorize control systems as either open-loop or closed-loop. Closed-loop controllers (or feedback
-controllers) compute the control action based on the measured output of the system being controlled.
+Can further categorize control systems as either open-loop or closed-loop.
+Можно также классифицировать системы управления на  разомкнутые и замкнутые.
+ Closed-loop controllers (or feedback controllers) compute the control action based on the measured output of the system being controlled.

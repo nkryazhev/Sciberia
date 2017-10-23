@@ -3,11 +3,11 @@
 # Modeling principles:
 
 1.  Identify the states of the system:
-    *   positions
-    *   velocities
-    *   inductor currents
-    *   capacitor voltages
-    *   etc
+    *   positions;
+    *   velocities;
+    *   inductor currents;
+    *   capacitor voltages;
+    *   etc.
 
 2.  Используя знание физики найдите $\frac{dx_1}{dt}, \frac{dx_2}{dt},\ldots$
 
@@ -28,7 +28,7 @@ $$
 
 4.  Линеарезуйте если потребуется.
 
-### Моделирования двигателя постоянного тока
+### Моделирование двигателя постоянного тока
 
 Физическое представление:
 
@@ -82,19 +82,19 @@ Now model the circuit. Start with motor part itself. The power supplied to the m
 $$P=e i_a$$
 
 This must equal (by 1st law) the torque power:
-По первому закона потребляемая мощность должа равняться электромагнитной мощности
+По первому закону  потребляемая мощность должа равняться электромагнитной мощности
 
 $$P = T\dot{\Theta} = K_t i_a \dot{\Theta}$$
 
-Equating the previous two equations:
+Приравняв уравнения выше получим:
 
 $$e = K_t \dot{\Theta}$$
 
-Therefore,
+Следовательно,
 
 $$K_e = K_t$$
 
-So now we can ﬁnd $\frac{d i_a}{dt}$:
+Теперь мы можем найти $\frac{d i_a}{dt}$:
 
 $$
 \begin{align*}
@@ -103,7 +103,7 @@ $$
 \end{align*}
 $$
 
-Therefore,
+Следовательно,
 
 $$\dot{x}_3 = - \frac{K_t}{L} x_2 - \frac{R_a}{L} x_3 + \frac{1}{L} v_a$$
 

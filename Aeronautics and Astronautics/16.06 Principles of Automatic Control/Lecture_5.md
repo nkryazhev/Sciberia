@@ -4,9 +4,9 @@
 
 Usually, we ﬁnd the response of a system using Laplace techniques. Often, do within Matlab.
 
-**Example: DC Motor.**
+**Пример: Двигатель постоянного тока**
 
-Suppose:
+Допустим:
 
 $$
 \begin{align*}
@@ -18,8 +18,7 @@ R_a &= 10\Omega,\; L= 1\; H
 \end{align*}
 $$
 
-
-Then
+Тогда
 
 $$
 \begin{align*}
@@ -45,13 +44,13 @@ Then ﬁnd $L^{-1}$ of each term, add together, and simplify. A lot of work.
 
 Instead, use MATLAB:
 
-``` matlab
+```marlab
 num = [0 0 100];
 den = [1 10.1 101];
 sysg = tf(num, den);
 t = 0:0.01:5;
-y = step(sysg,t);
-plot(t,y);
+y = step(sysg, t);
+plot(t, y);
 ```
 
 The above code produces the following ﬁgure:
@@ -62,19 +61,19 @@ Figure 1: Velocity of the motor.
 
 The above system was an open-loop system. Would do the same for a closed-loop system, after ﬁnding the transfer function.
 
-Example:
+Пример:
 
 The transfer function from aileron input (\(\delta_a\)) to roll angle (\(\varphi\)) is given by
 
 $$\frac{\Phi}{\delta_a}(s) = \frac{k}{s(\tau + 1}$$
 
-\[
+$$
 \begin{align*}
 \text{where} \; k &= \text{steady roll-rate per unit of aileron deﬂection}\\
 \tau &= \text{roll subsidence time constant}\\
 &= \frac{I}{-M_{\phi}}
 \end{align*}
-\]
+$$
 
 
 Suppose $\delta_a$ is measured in % of full deﬂection, so $\delta_a = 1$ is full right aileron, $\delta_a = -1$ if full left one. Then a typical set of parameters might be
@@ -120,8 +119,3 @@ ylabel(’Roll angle, \phi (deg)’);
 Figure 2: Roll angle vs time.
 
 The result (shown in Figure 2) is NOT very good. Oscillatory! More on this later.
-
-Переведено на Нотабеноиде
-http://translate.kursomir.ru/book/30/60
-
-Переводчики: nkryazhev

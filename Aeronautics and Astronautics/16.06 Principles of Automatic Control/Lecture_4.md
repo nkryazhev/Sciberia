@@ -1,7 +1,7 @@
 ﻿<sup>16.06 Principles of Automatic Control | Lecture 4</sup>
 
 
-# Block Diagram Manipulations:
+# Преобразования структурных схем:
 
 ![Cхема 1](images/4/block-diagram-1.svg)
 
@@ -23,7 +23,7 @@ Mason’s Rule:
 $$
 \begin{align*}
  H(s)     & = \frac{1}{\Delta} \sum_{i} H_i \Delta_i                                \\
- H(s)     & = \text{losed-loop transfer function}                                   \\
+ H(s)     & = \text{передаточная функция замкнутой системы}                                   \\
           & = 1-\sum \text{all loop gains}                                          \\
           & =\; + \sum \text{(products of 2 loops that don't touch)}                \\
           & =\; - \sum \text{(products of 3 loops that don't touch)}                \\
