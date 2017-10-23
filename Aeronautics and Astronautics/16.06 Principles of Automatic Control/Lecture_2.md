@@ -14,11 +14,11 @@ _Для этого необходима обратная связь!_
 
 Components in a typical control system:
 
-![Структурная схема](images/2/structual-scheme.svg)
+![Структурная схема](images/2/2-structual-scheme.svg)
 
 Обычно нас интересует случай когда объект управления и регулятор линейны и не зависят от времени или могут быть представлены в таком виде. Тогда мы можем представить элементы системы в виде передаточных функций.
 
-![Компоненты передаточной функции](images/2/transfer-function-components.svg)
+![Компоненты передаточной функции](images/2/2-transfer-function-components.svg)
 
 Такая форма записи, в виде структурных схем, чрезвычайно удобна и будет использоваться каждый раз на наших занятиях.
 
@@ -28,13 +28,13 @@ Components in a typical control system:
 
 Рассмотрим простейший объект управления:
 
-![Объект управления](images/2/simple-plant.svg)
+![Объект управления](images/2/2-simple-plant.svg)
 
 Suppose we want $y$ to track reference signal $r$.
 
 Could control by open-loop control
 
-![Прямое управление](images/2/open-loop.svg)
+![Прямое управление](images/2/2-open-loop.svg)
 
 or by closed-loop control
 
