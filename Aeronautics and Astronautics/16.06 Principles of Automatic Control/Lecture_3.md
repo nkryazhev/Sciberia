@@ -9,48 +9,49 @@
     *   capacitor voltages
     *   etc
 
-2.  Use physics to ﬁnd $\frac{dx_1}{dt}, \frac{dx_2}{dt},\ldots$
+2.  Используя знание физики найдите $\frac{dx_1}{dt}, \frac{dx_2}{dt},\ldots$
 
-3.  Organize as:
+3.  Преобразуйте вынеся производную в левую часть:
 
 $$\frac{dx}{dt}=\underline{f}(\underline{x}, u)\qquad y=g(\underline{x}, u)$$
 
-where
+где,
 
 $$
 \begin{align*}
 x &-\text{вектор состояния} \\
-u &-control input\\
-y &-output of measurement
+u &-\text{управляющий сигнал}\\
+y &-\text{измеренный выходной сигнал}
 \end{align*}
 $$
 
 
-4.  Linearize if necessary.
+4.  Линеарезуйте если потребуется.
 
 ### Моделирования двигателя постоянного тока
 
-Physical layout:
+Физическое представление:
 
 ![ДПТ](images/3/dc-motor.svg)
 
-Model:
+Модель:
 
 ![ДПТ Cхема](images/3/dc-motor-scheme.svg)
 
 The states are:
+Переменные состояния:
 $$
 \begin{align*}
-x_1 &= \Theta\;-\;\text{motor angle}\\
-x_2 &= \dot{\Theta} \;-\;\text{motor angular velocity}\\
-x_3 &= i_a \;-\;\text{armature current}
+x_1 &= \Theta\;-\;\text{угол поворота двигателя}\\
+x_2 &= \dot{\Theta} \;-\;\text{угловая скорость двигателя}\\
+x_3 &= i_a \;-\;\text{ток в обмотке двигателя}
 \end{align*}
 $$
 
-Find equations of motion:
+Определим уравнения движения:
 $$
 \begin{align*}
-\dot{x}_1 & = \frac{d\Theta}{dt} = \dot{\Theta} = x_2\;\text{(Kinematics)}\\
+\dot{x}_1 & = \frac{d\Theta}{dt} = \dot{\Theta} = x_2\;\text{(из уравнений Кинематики)}\\
 \dot{x}_2 & = \frac{d\dot{\Theta}_1}{dt}  = \ddot{\Theta}
 \end{align*}
 $$
@@ -60,13 +61,13 @@ From free body diagram:
 $$
 \begin{align*}
 J\ddot{\Theta} & = - b\dot{\Theta} + T\\
-- b\dot{\Theta} & =\;\text{viscous drag on rotor}\\
-T & =\;\text{torque due to current}\\
-   &=\; K_t i_a ,\; \text{where}\; K_t\;\text{is a motor torque constant}
+- b\dot{\Theta} & =\;\text{вязкое трение в роторе}\\
+T & =\;\text{вращающий момент пропорциональный току}\\
+   &=\; K_t i_a ,\; \text{где}\; K_t\;\text{постоянная момента двигателя}
 \end{align*}
 $$
 
-So
+Таким образом,
 
 $$
 \begin{align*}
@@ -76,10 +77,12 @@ $$
 $$
 
 Now model the circuit. Start with motor part itself. The power supplied to the motor is
+Теперь опишем мат. модель электрической цепи. Начнем с описания самого двигателя. Мощность потребляемая двигателем равна:
 
 $$P=e i_a$$
 
 This must equal (by 1st law) the torque power:
+По первому закона потребляемая мощность должа равняться электромагнитной мощности
 
 $$P = T\dot{\Theta} = K_t i_a \dot{\Theta}$$
 

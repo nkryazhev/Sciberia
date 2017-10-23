@@ -1,18 +1,18 @@
 <sup>16.06 Принципы автоматического управления | Лекция 2</sup>
 
-# Reasons for using automatic control:
+# Использование автоматического управления позволяет:
 
-*   Reduce workload
-*   Perform tasks people can’t
-*   Reduce the effects of disturbances
-*   Reduce the effects of plant variations
-*   Stabilize an unstable system
-*   Improve the performance of a system (time response)
-*   Improve the linearity of the system
+*   cнизить рабочую нагрузку;
+*   выполнять задачи, которые не могут выполнить люди;
+*   снизить негативное влияние внешних возмущений или помех;
+*   снизить чувствительность к изменению параметров объекта управления;
+*   стабилизировать неустойчивую систему;
+*   повысить быстродействие системы
+*   <span style="color:red">Improve the linearity of the system</span>
 
-_Для этого необходима обратная связь!_
+_Но для этого необходима обратная связь!_
 
-Components in a typical control system:
+Рассмотрим элементы типовой системы управления:
 
 ![Структурная схема](images/2/2-structual-scheme.svg)
 
@@ -20,80 +20,81 @@ Components in a typical control system:
 
 ![Компоненты передаточной функции](images/2/2-transfer-function-components.svg)
 
-Такая форма записи, в виде структурных схем, чрезвычайно удобна и будет использоваться каждый раз на наших занятиях.
+Такая форма записи, в виде структурных схем, очень удобна и будет использоваться нами постоянно.
 
 ### Почему структурные схемы настолько мощный инструмент?
 
-Система описывается с помощью дифференциальных уравнений, но передаточный функции(преобразование Лапласа) превращают дифференциальные уравнения в обычную алгебру. Ухты!
+ Обычно системы описываются с помощью дифференциальных уравнений, но передаточные функции (Преобразование Лапласа) позволяют упростить дифференциальные уравнения до обычной алгебры. Ухты!
 
-Рассмотрим простейший объект управления:
+Давайте рассмотрим простейший объект управления:
 
 ![Объект управления](images/2/2-simple-plant.svg)
 
-Suppose we want $y$ to track reference signal $r$.
-
-Could control by open-loop control
+Допустим мы хотим чтобы наш вход $y$ следил за величиной задающего сигнала $r$.
+Для этого можно воспользоваться _разомкнутой_ системой управления.
 
 ![Прямое управление](images/2/2-open-loop.svg)
 
-or by closed-loop control
+или _замкнутой_ (с обратной связью).
 
-![Управление с обратной связью](images/2/closed-loop.svg)
+![Управление с обратной связью](images/2/2-closed-loop.svg)
 
-Note that the control gain (5) is arbitrary - we’ll ﬁgure out how to chose it later.
+Обратите внимание что коэффициент усиления (5) был выбран случайно, как
+правильно подбирать коэффициенты усиления мы рассмотрим позднее.
 
-### How  well  do  these  control  systems  work?
+### Как хорошо эти системы работают?
 
-Look at transfer functions from $r$ to $y$:
+Взглянем на передаточные функции с $r$ по $y$:
 
 $$
 \begin{array}{r|c|c}
- & \text{Open Loop} & \text{Closed Loop} \\\hline
+ & \text{Разомкнутая} & \text{Замкнутая} \\\hline
 \frac{y}{r}  & \frac{1}{10} \cdot 10 = 1  & \frac{5\cdot10}{1+5\cdot10} = \frac{50}{51} \approx 0.98 \\
 \end{array}
 $$
 
-We want $\frac{y}{r} = 1$, so at ﬁrst glance, it looks like open-loop is better than closed-loop. However, consider what happens if it turns out our plant model was wrong (or changes), so that really  G(s)= 15. Then
+Мы хотим чтобы $\frac{y}{r} = 1$, так что на первый взгляд может показаться, что разомкнутая система лучше чем замкнутая. Однако, давайте посмотрим что произойдет если мы вдруг обнаружим, что модель нашего объекта управления была описана неверно (или меняется с течением времени). Для этого примем $G(s) = 15$. Тогда
 
 $$
 \begin{array}{r|c|c}
-& \text{Open Loop} & \text{Closed Loop} \\\hline
+& \text{Разомкнутая} & \text{Замкнутая} \\\hline
 \frac{y}{r} & \frac{1}{10} \cdot 15 = 1.5 & \frac{5\cdot15}{1+5\cdot15} = \frac{75}{76} \approx 0.9868 \\
 \end{array}
 $$
 
-That is, if the plant gain changes by 50%, the transfer function of the open-loop system will vary by 5-%. However, the transfer function of the closed-loop system will vary by only  0.66% (in this case).
+То есть, если коэффициент усиление менятся на 50%, передаточная функция
+разомкнутой системы изменится на 50%. Тогда как передаточная функция замкнутой
+системы изменится лишь на 0.69% (для данного случая).
 
-More generally, for a typical unity-feedback control system:
 
-![Единичная обратная связь](images/2/unity-feedback-loop.svg)
+В целом, для типовой системы управления с единичной обратной связью вида:
 
-More generally, for a typical unity-feedback control system:
+![Единичная обратная связь](images/2/2-unity-feedback-loop.svg)
+
+Чувствительность передаточной функции замкнутой системы:
 
 $$H = \frac{KG}{1 + KG} = \frac{y}{r}$$
 
-
 $$is\;S = \frac{1}{1 + KG} = \frac{\%\; change\; in\; H}{\%\; change\; in\; G}$$
 
-%  change  in  H  %  change  in  G
 
-Big  idea:
->High gain control loop reduces the sensitivity of  the control system to variations in the plant.
+Главная мысль:
+>Использование большого коэффициента усиления в управляющей цепи разомкнутого контура делает систему управления менее чувствительной к изменению в объекте управления
 
-Now consider effects of a disturbance:
+Теперь рассмотрим влияние внешних возмущений:
 
-Open-loop:
+Разомкнутая система:
 
-![Возмущение при прямом управлении](images/2/open-loop-plus-disturbance.svg)
+![Возмущение при прямом управлении](images/2/2-open-loop-disturbance.svg)
 
 $$\frac{y}{d}=1$$
 
-Closed-loop:
+Замкнутая система:
 
-![Возмущение при управлении с обратной связью](images/2/closed-loop-plus-disturbance.svg)
+![Возмущение при управлении с обратной связью](images/2/2-closed-loop-disturbance.svg)
 
 $$\frac{y}{d} = \frac{1}{1+KG}=\frac{1}{51}=0,02$$
 
 
-Big  Idea:
->High-gain feedback control greatly reduces the effect of disturbances on the output of a control system.
+Главная мысль:
+>Использование большого коэффициента усиления в системах с обратной связью позволяет значительно уменьшить влияние возмущений на выход системы.
