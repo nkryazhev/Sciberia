@@ -8,7 +8,7 @@
 *   Активное обучение является важной частью занятий. Приходите на занятия готовыми учиться, думать и работать в команде;
 *   Учебник: Franklin, Powell, Emami-Naeni, Feedback Control of Dynamic Systems, 5-ое издание.
 
-**Примечание:** Любой **кроме** 4-ого издания.
+**Примечание:** Любой, **кроме** 4-ого издания.
 
 Структура итоговой оценки:
 
@@ -17,17 +17,13 @@
 *   Финальный  экзамен — 30%
 *   Домашняя работа — 20%
 *   Работа на занятиях — 5%
-*   Оценки учебного персонала —  5%??*
+*   <span style="color:red">Оценки учебного персонала —  5%?</span>
 
-See collaboration policy. It is NOT same the same as Unified. In particular, it is not allowed to use
-solutions from past years from any source.
+Смотри правила о совместной работе. Они отличаются от правил в курсе Unified Engineering (Серия курсов MIT [16.01, 16.02, 16.03, 16.04](http://ocw.mit.edu/courses/aeronautics-and-astronautics/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/)). В частности, недопустимо использование ответов и решний с прошлогодних курсов.
 
 *   Как правило, не сданные вовремя задания, не принимаются.
 
-May sometimes have to “look ahead” problems where you need to read material to be able to do the
-problems.
-
-Иногда, чтобы справиться с задачей, вам может потребоваться «забежать» вперед и самим прочитать материал более поздних занятий.
+Иногда, чтобы справиться с задачей, вам может потребоваться «забежать» вперед и самим прочитать еще не пройденный материал более поздних лекций.
 
 ### Почему «автоматическое» управление?
 
@@ -36,12 +32,9 @@ problems.
 *   Ручное управление
 *   Автоматическое управление
 
-We’ll be discussing automatic control almost exclusively. Automatic control systems can be designed to hold
-an output steady or to track a desired reference signal.
+Наши занятия мы практически всецело посвятим автоматическому управлению. Системы автоматического управления (САУ) могут быть спроектированы для поддержания выходного состояния (переменной) на каком-то уровне или с целью слежения за желаемым выходным сигналом.
 
-* Regulator: keep output at a steady, known value
-* Tracking or servo system: Make output track a reference system
+*   _Система регулирования_: поддерживает выход системы (выходной сигнал) на постоянном заданном уровне;
+*   _Следящая система_ или _сервомеханизм_: выход системы следит за изменением входного сигнала.
 
-Can further categorize control systems as either open-loop or closed-loop.
-Можно также классифицировать системы управления на  разомкнутые и замкнутые.
- Closed-loop controllers (or feedback controllers) compute the control action based on the measured output of the system being controlled.
+Можно также классифицировать системы управления на  разомкнутые и замкнутые. Замкнутые системы управления (или системы с обратной связью) формируют управляющее воздействие на основе измеренного выходного сигнала управляемой системы.

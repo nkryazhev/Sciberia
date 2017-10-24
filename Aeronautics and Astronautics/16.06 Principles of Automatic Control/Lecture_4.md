@@ -1,21 +1,21 @@
 ﻿<sup>16.06 Principles of Automatic Control | Lecture 4</sup>
 
 
-# Преобразования структурных схем:
+# Преобразование структурных схем:
 
-![Cхема 1](images/4/block-diagram-1.svg)
+![Cхема 1](images/4/4-block-diagram-1.svg)
 
-![Cхема 2](images/4/block-diagram-2.svg)
+![Cхема 2](images/4/4-block-diagram-2.svg)
 
-![Cхема 3](images/4/block-diagram-3.svg)
+![Cхема 3](images/4/4-block-diagram-3.svg)
 
 >The gain of a single loop feedback system (with sign “-1” in the loop) is the forward gain divided by the sum of 1 plus the loop gain.
 
-![Cхема 4](images/4/block-diagram-4.svg)
+![Cхема 4](images/4/4-block-diagram-4.svg)
 
 So,
 
-![Cхема 5](images/4/block-diagram-5.svg)
+![Cхема 5](images/4/4-block-diagram-5.svg)
 
 
 Mason’s Rule:
@@ -36,6 +36,6 @@ $$
 
 **Example**
 
-![Пример](images/4/example.svg)
+![Пример](images/4/4-example.svg)
 
 $$H(s) = \frac{G_1 G_2 G_3}{1 + G_1 G_2 + G_2 G_3}$$

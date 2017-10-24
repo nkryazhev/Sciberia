@@ -1,13 +1,13 @@
 ﻿<sup>16.06 Принципы автоматического управления | Лекция 3</sup>
 
-# Modeling principles:
+# Принципы моделирования:
 
-1.  Identify the states of the system:
-    *   positions;
-    *   velocities;
+1.  Определите переменные описывающие состояние системы:
+    *   положение;
+    *   скорости;
     *   inductor currents;
-    *   capacitor voltages;
-    *   etc.
+    *   напряжение на конденсаторах;
+    *   и т.д.
 
 2.  Используя знание физики найдите $\frac{dx_1}{dt}, \frac{dx_2}{dt},\ldots$
 
