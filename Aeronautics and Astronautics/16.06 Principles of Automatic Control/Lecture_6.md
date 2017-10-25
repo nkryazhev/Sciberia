@@ -7,32 +7,37 @@ Many control systems are dominated by a second order pair of poles. So look at t
 
 $$H(s) = \frac{\omega_n^2}{s^2 + 2 \zeta \omega_n s +\omega_n^2 }$$
 
-Typical response:
+Реакция системы управления на ступенчатое воздействие:
 
-![Переходной процесс](images/6/step-response.svg)
+![Переходной процесс](images/6/6-step-response.svg)
 
 $$
 \begin{align*}
-M_p &= \text{peak overshoot}\\
-t_r &= \text{rise time (10% to 90%)}\\
-t_s &= \text{settling time (1%)}\\
-t_p &= \text{time of peak}
+M_p &= \text{максимальное перерегулирование;}\\
+t_r &= \text{время нарастания  (с 10% до 90%);}\\
+t_s &= \text{время установления или время переходного процесса (1%);}\\
+t_p &= \text{время максимума.}
 \end{align*}
 $$
 
-Each of the above parameters may be important in the design of the control system. For example, the designer of a hard disk drive may specify a maximum settling time of the response of the read/write head to a commanded change in position.
+Каждый из этих параметров может быть важен при проектировании системы управления. Например, инженер проектирующий жесткий диск может задавать максимальное время (время установления) за которое пищущая головка меняет свое положения после получения соответствующей команды.
 
-Peak overshoot is important, both because it is a measure (to a degree) of stability, and for practical reasons, overshoot should be minimized (think of an elevator!).
+Максимальное перерегулирование так же очень важно, хотя бы потому, что это мера устойчивости системы. С практической точки зрения величину перерегулирования нужно уменьшать (представьте себе как будет работать неустойчивый лифт!).
 
-Rise time $t_r$ (and to a lesser extent peak time $t_p$) is a measure of the speed of response of the system.  Often, a maximum $t_r$ will be speciﬁed.
+Время нарастания $t_r$ (и в меньшей степени время максимума $t_p$) — это мера скорости реакции системы. Чаще всего максимальное время нарастания $t_r$ будет задаваться в требованиях.
+
 
 We can connect $\zeta$ and $\omega_n$ to $M_p,\; t_p,\; t_r$ , with two important caveats: ﬁrst, some of the rela­ tionships are approximate. Second, additional poles and zeros will change the results, so all of the results should be viewed as guidelines.
 
-The step response of $H(s)$ is
+Мы можем связать $\zeta$ и $\omega_n$ с $M_p,\; t_p,\; t_r$, с двумя важными оговорками. Во-первых, некотоые взаимосвязи довольно приблизительные. Во-вторых, дополнительные нули и полюса изменят результат, поэтому все возможные варианты должны быть методически разобраны.
+
+
+Реакция на ступенчатое воздействие для $H(s)$ выглядит так
 
 $$h_s(t) = 1 - e^{-\zeta \omega_n t} \left( \cos (\omega_d t) + \frac{1}{\sqrt{1 - \zeta^2}} \sin (\omega_d t) \right)$$
 
-Using elementary calculus, we can ﬁnd $t_p$ and $M_p$ (see text):
+
+Проведя несложные расчеты мы можем найти $t_p$ и $M_p$ (see text):
 
 $$
 \begin{align*}
@@ -42,26 +47,26 @@ M_p &= e^{\frac{-\pi \zeta}{\sqrt{1 - \zeta^2}}}\\
 \end{align*}
 $$
 
-where $\Theta = \sin^{-1} \zeta$.
+где $\Theta = \sin^{-1} \zeta$.
 
-Typical values:
+Типовые значеная:
 
-$$
-\begin{array}{|c|c|}
-\hline
-\zeta & M_p \\\hline
-0,5 & 0,16 \\\hline
-0,7 & 0,05 \\\hline
-\end{array}
-$$
+| $\zeta$  |  $M_p$ |
+|-------------:|-------------:|
+| $0,5$ | $0,16$  |
+| $0,7$  | $0,05$  |
 
-The rise time is approximately
+
+Время нарастание будет примерно:
 
 $$ t_r \approx \frac{1,8}{\omega_n}$$
 
 The _rise time_ is a bit faster for systems with less damping, a bit longer for systems with more damping, and sensitive to additional poles and zeros.
 
-The _settling time_ can be approximated via:
+_Время нарастания_ меньше (протекает быстрее) в системах с малым демпфирование, медленне — в демфированных системах, а так же чувствительно к дополнительным полюсам и нулям.
+
+
+_Время установления_ будет приблизительно равно:
 
 $$
 \begin{align*}
@@ -73,9 +78,9 @@ $$
 
 Note that, in reality, settling time varies discontinuously with $\zeta$, since as damping increases, a peak may decrease from just over 1,01 to just under 1,01, so $t_s$ is drastically reduced.
 
-## Desired  pole  locations
+## Желаемое расположение полюсов
 
-Given speciﬁcations on $t_r,\; M_p$, and $t_s$, where should poles be?
+Учитывая требования к $t_r,\; M_p$, and $t_s$, где должны располагаться полюсы?
 
 $$
 \begin{align*}
@@ -85,21 +90,23 @@ t_r &\le a\\
 \end{align*}
 $$
 
-![Полюсы](images/6/poles.svg)
+![Полюсы](images/6/6-poles.svg)
 
-Likewise, to keep $M_p$ less than a ﬁxed value, must have $\zeta \ge \zeta (M_p)$:
+Точно также, что бы $M_p$ было меньше заданного значения, нужно чтобы $\zeta \ge \zeta (M_p)$:
 
 
-![Полюсы 1](images/6/poles1.svg)
+![Полюсы 1](images/6/6-poles1.svg)
 
-Finally, must have:
+И наконец нужно чтобы:
 
 $$\zeta \omega_n \ge \frac{4,6}{t_s}$$
 
-![Полюсы 2](images/6/poles2.svg)
+![Полюсы 2](images/6/6-poles2.svg)
 
-Putting these constraints together will yield an allowable region for the poles (see better drawing in text):
+Объединение всех этих ограничений вместе даст нам допустимую область в которой могут распологаться полюсы:
 
 ![Допустимое расположение полюсов](images/6/poles-area.svg)
 
 **N.B.:** The allowable region is a guide. After a system is designed, the performance will have to be evaluated.
+
+Примечание: Допустимая область всего лишь ориентир. После того как система спроектирована её быстродействие должно проанализированно.

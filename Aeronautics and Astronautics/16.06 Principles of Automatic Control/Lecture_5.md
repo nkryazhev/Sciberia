@@ -59,38 +59,38 @@ plot(t, y);
 
 _Рисунок 1 – Скорость двигателя_
 
-Система выше – разомкнутая. Для замкнутой системы, после получения передаточной функции, можно сделать тоже самое.
+Система выше — разомкнутая. Для замкнутой системы, после получения передаточной функции, можно сделать тоже самое.
 
 **Пример:**
 
-Передаточная функция от задающего сигнала элеронов $\delta_a$ к углу крена $\varphi$ имеет вид:
+Передаточная функция от задающего сигнала элерона $\delta_a$ к углу крена $\varphi$ имеет вид:
 
 $$\frac{\Phi}{\delta_a}(s) = \frac{k}{s(\tau + 1)}$$
 
 $$
 \begin{align*}
 \text{где} \; k &= \text{steady roll-rate per unit of aileron deﬂection}\\
-\tau &= \text{постоянная времени определяющая время затухания крена}\\
+\tau &= \text{roll subsidence time constant}\\
 &= \frac{I}{-M_{\phi}}
 \end{align*}
 $$
 
-
-Suppose $\delta_a$ is measured in % of full deﬂection, so $\delta_a = 1$ is full right aileron, $\delta_a = -1$ if full left one. Then a typical set of parameters might be
+Допустим $\delta_a$ измеряется в процентах от полного отклонения, тогда $\delta_a = 1$ это полное отклонение правого элерона, $\delta_a = -1$ — левого. Возьмём такие исходные данные:
 
 $$
 \begin{align*}
-k &= 100\; \text{deg/sec}\\
-\tau & = 0,5\; sec\\
+k &= 100\; \text{град/с}\\
+\tau & = 0,5\; с\\
 G(s) &= \frac{100}{s(0,5s + 1)}
 \end{align*}
 $$
 
-Suppose we implement the following control law:
+Допустим мы применяем следующий закон управления:
 
 ![Структурная схема](images/5/5-transfer-function.svg)
 
-What is the transfer function of a closed-loop system?
+Какой будет передаточная функция замкнутой системы?
+
 
 $$
 \begin{align*}
@@ -99,8 +99,8 @@ H(s) &= \frac{KG(s)}{1+KG(s)} = \frac{\dfrac{Kk}{s(\tau s + 1)}}{1 + \dfrac{Kk}{
 \end{align*}
 $$
 
-Suppose we take $K = 0,1/deg$.
-Then:
+Пример $K = 0,1/c$, тогда:
+
 
 $$
 \begin{align*}
@@ -126,4 +126,4 @@ ylabel(’Угол крена, \phi (град)’);
 
 _Рисунок 2 – Зависимость угла крена от времени_
 
-The result (shown in Figure 2) is NOT very good. Oscillatory! More on this later.
+Мда...Не очень хороший результат. Система получилась слишком колебательной! Ничего, остановимся на этом чуть позже.
