@@ -1,8 +1,9 @@
 ﻿16.06 Principles of Automatic Control | Lecture 5
 
 ## Dynamic Response:
+Динамика системы
 
-Usually, we ﬁnd the response of a system using Laplace techniques. Often, do within Matlab.
+Обычно мы находим реакцию системы используя преобразования Лапласа. Проще всего сделать это с помощью MATLAB.
 
 **Пример: Двигатель постоянного тока**
 
@@ -29,9 +30,9 @@ G(s) &= \frac{100}{(s+5,05 + j 8,6889)(s+5,05 + -j8,6889}
 \end{align*}
 $$
 
-What is the step response of the motor?  That is, what is the velocity of the motor as a function of time, if $v_a (t) = \sigma (t)$?
+Как будет выглядить переходный процесс этого двигателя? Иначе говоря, как будет вести себя скорость двигателя в зависимости от времени, если $v_a (t) = \sigma (t)$?
 
-By hand, would do:
+Если бы мы делали все вручную, нам пришлось бы посчитать:
 
 $$\begin{align*}
 g_s (t) &= L^{-1} \left[ \frac{1}{s} G(s) \right]\\\\
@@ -39,12 +40,11 @@ g_s (t) &= L^{-1} \left[ \frac{1}{s} G(s) \right]\\\\
 &= \frac{r_1}{s} + \frac{r_2}{s + a + jb} + \frac{r_3}{s + a - jb}
 \end{align*}$$
 
-Would ﬁnd $r_1 ,\; r_2 ,\; r_3$ by partial fraction expansion.
-Then ﬁnd $L^{-1}$ of each term, add together, and simplify. A lot of work.
+Затем, разложив на сумму элементарных дробей, найти $r_1 ,\; r_2 ,\; r_3$. Для каждого элемента определить $L^{-1}$ (обратное преобразование Лапласа), сложить все вместе и  упростить. В общем много работы.
 
-Instead, use MATLAB:
+Но вместо этого можно использовать MATLAB:
 
-```marlab
+```matlab
 num = [0 0 100];
 den = [1 10.1 101];
 sysg = tf(num, den);
@@ -53,24 +53,24 @@ y = step(sysg, t);
 plot(t, y);
 ```
 
-The above code produces the following ﬁgure:
+Приведенный код построит нам вот такой график:
 
-![sdsd]()
+![Переходный процесс](images/5/5-step.svg)
 
-Figure 1: Velocity of the motor.
+_Рисунок 1 – Скорость двигателя_
 
-The above system was an open-loop system. Would do the same for a closed-loop system, after ﬁnding the transfer function.
+Система выше – разомкнутая. Для замкнутой системы, после получения передаточной функции, можно сделать тоже самое.
 
-Пример:
+**Пример:**
 
-The transfer function from aileron input (\(\delta_a\)) to roll angle (\(\varphi\)) is given by
+Передаточная функция от задающего сигнала элеронов $\delta_a$ к углу крена $\varphi$ имеет вид:
 
-$$\frac{\Phi}{\delta_a}(s) = \frac{k}{s(\tau + 1}$$
+$$\frac{\Phi}{\delta_a}(s) = \frac{k}{s(\tau + 1)}$$
 
 $$
 \begin{align*}
-\text{where} \; k &= \text{steady roll-rate per unit of aileron deﬂection}\\
-\tau &= \text{roll subsidence time constant}\\
+\text{где} \; k &= \text{steady roll-rate per unit of aileron deﬂection}\\
+\tau &= \text{постоянная времени определяющая время затухания крена}\\
 &= \frac{I}{-M_{\phi}}
 \end{align*}
 $$
@@ -88,34 +88,42 @@ $$
 
 Suppose we implement the following control law:
 
-_diag_
+![Структурная схема](images/5/5-transfer-function.svg)
 
 What is the transfer function of a closed-loop system?
 
+$$
 \begin{align*}
 H(s) &= \frac{KG(s)}{1+KG(s)} = \frac{\dfrac{Kk}{s(\tau s + 1)}}{1 + \dfrac{Kk}{s(\tau s + 1)}}\\
 &= \frac{Kk}{\tau s^2 + s + Kk}
 \end{align*}
+$$
 
 Suppose we take $K = 0,1/deg$.
 Then:
 
+$$
 \begin{align*}
 H(s) &= \frac{10}{0,5 s^2 + s + 10}\\
 H(s) &= \frac{20}{0,5 s^2 + 2s + 20}
 \end{align*}
+$$
 
-Find step response via MATLAB:
+Построим переходный процесс с помощью MATLAB:
 
-num=[0  0  20];
-den=[1 2 20];
-sysg=tf(num,den);
-t=0:0.01:5;
-y=step(sysg,t);
-plot(t,y);
-xlabel(’Time, t (sec)’);
-ylabel(’Roll angle, \phi (deg)’);
+```matlab
+num = [0  0  20];
+den = [1 2 20];
+sysg = tf(num, den);
+t = 0:0.01:5;
+y = step(sysg, t);
+plot(t, y);
+xlabel(’Время, t (с)’);
+ylabel(’Угол крена, \phi (град)’);
+```
 
-Figure 2: Roll angle vs time.
+![Переходный процесс](images/5/5-roll-time.svg)
+
+_Рисунок 2 – Зависимость угла крена от времени_
 
 The result (shown in Figure 2) is NOT very good. Oscillatory! More on this later.
