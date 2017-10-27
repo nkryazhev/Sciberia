@@ -11,13 +11,13 @@ sensor noise
 $e'$  is the error perceived by the control system; e is the actual
 error.  The important transfer functions  are
 
-\[
+$$
 \begin{align*}
 \frac{Y}{R}(s) &= \frac{1}{1 + K(s)G(s)} \equiv S(s)\\
 \frac{E}{D}(s) &= \frac{-1}{1 + K(s) G(S)} \equiv -S(s)\\
 \frac{E}{V}(s) &= \frac{-K(s)G(s)}{1 + K(s)G(s)} \equiv -T(s)
 \end{align*}
-\]
+$$
 
 S(s) = Sensitivity transfer function
 T(s) =Complementary Sensitivity transfer function

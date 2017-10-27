@@ -2,7 +2,7 @@
 
 # Lecture 8
 
-### Критерий устойчивости Рауса
+### Критерий устойчивости Рауса-Гурвица
 
 Suppose we have a transfer function:
 

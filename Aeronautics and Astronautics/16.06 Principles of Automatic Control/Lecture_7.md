@@ -44,9 +44,9 @@ which is the same as
 
 $$\left| - 1/ \alpha \right| \gg \left| \omega_n \right|$$
 
-pic1.
-zero here has big effect
-zero here has small effect
+
+![Расположение нулей](images/7/7-zeros-location.svg)
+
 
 ## Неминимально фазовые нули
 
@@ -56,6 +56,10 @@ For technical reasons, a zero in the right half plane are called “non-minimum 
 For a NMP zero, $\alpha < 0$. So, the step response will be the original step response minus a constant times the derivative:
 Для неминимально фазового нуля, $\alpha < 0$. Поэтому, реакция на ступенчатое воздействие такой системы будетм выглядить как обычная реакция минус константа умноженная на производную.
 
+
+![Расположение нулей](images/7/7-non-min-step.svg)
+
+
 This results in initial “wrong way” behavior that is very undesirable. Examples of NMP systems:
 1.	Space shuttle on approach
 2.	Backing car
@@ -63,7 +67,8 @@ This results in initial “wrong way” behavior that is very undesirable. Examp
 
 
 To get a backing car to return to a given line, must make the front end go the wrong way ﬁrst:
-path of the front end
+
+![Расположение нулей](images/7/7-backing-car.svg)
 
 ## Влияние дополнительных полюсов
 
