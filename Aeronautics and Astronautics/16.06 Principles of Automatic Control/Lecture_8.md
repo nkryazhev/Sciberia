@@ -2,7 +2,7 @@
 
 # Lecture 8
 
-### The Routh Stability Criterion
+### Критерий устойчивости Рауса
 
 Suppose we have a transfer function:
 
