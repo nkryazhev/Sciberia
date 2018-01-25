@@ -105,7 +105,7 @@ $$\zeta \omega_n \ge \frac{4,6}{t_s}$$
 
 Объединение всех этих ограничений вместе даст нам допустимую область в которой могут распологаться полюсы:
 
-![Допустимое расположение полюсов](images/6/poles-area.svg)
+![Допустимое расположение полюсов](images/6/6-poles-area.svg)
 
 **N.B.:** The allowable region is a guide. After a system is designed, the performance will have to be evaluated.
 
