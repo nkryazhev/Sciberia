@@ -11,6 +11,8 @@
 
 >The gain of a single loop feedback system (with sign “-1” in the loop) is the forward gain divided by the sum of 1 plus the loop gain.
 
+Коеффициент усиления замкнутной системы единичной отрицательной обратной связью (со знаком "-" в обратной связе) равен коэффициенту усилиения в прямой цепи деленого на сумму единицы и коэффициенту усиления обратной связи
+
 ![Cхема 4](images/4/4-block-diagram-4.svg)
 
 So,

@@ -6,26 +6,42 @@
 
 Suppose we have a transfer function:
 
+Допустим у нас есть передаточная функция:
+
 $$T(s) = \frac{Y(s)}{R(s)}\frac{b_0 s^m + b_1 s^{m-1} + \dots + b_m}{s^n + a_1 s^{n-1} + \dots
 + a_n}$$
 
 We can always factor as
 
 $$T(s)=\kappa \frac{\prod_{i=1}^m (s - z_1)}{\prod_{i=1}^n (s - p_1)}$$
+
 The closed-loop system is stable if
+
+Замкнутая система устойчива если выполянется условие
 $$\mathfrak{R}(p_1) < 0, \forall\; i $$
 
-**NB:** It might turn out that there are pole-zero cancellations, that is, $z_i = p_j$ for some $i.j$. If this happens, system is still unstable if $\mathfrak{R}(p_1) > 0$.
+**NB:** It might turn out that there are pole-zero cancellations, that is, $z_i = p_j$ for some $i.j$. If this happens, system is still unstable if
+
+$$\mathfrak{R}(p_1) > 0$$
 
 The _characteristic equation_ is:
 
+_Характеристическое уравнение_ имеет вид
+
 $$\phi(s) = s^n + a_1 s^{n-1} + \dots + a_{n-1} s + a_n =0$$
+
 The roots are, of course, $p_1, p_2,\dots p_n$.
+
+Его корни соответственно $p_1, p_2,\dots p_n$.
 
 **Important question:** Can we tell if the system is stable, without actually solving for the roots?
 
+**Важный вопрос:** Можем ли мы сказать устойчива ли система, при этом не вычисляя корни?
+
 **Partial answer:** A necessary condition for all the roots to be stable is that all the coeﬃ­ cients of $\varphi(s)$ be positive. So if at least one coeﬃcient is negative, system must be unstable.
 A complete answer to the question is obtained using the Routh Array.  The array is con­ stracted as bellow:
+
+**Частичный ответ** Необходимое условие устойчивости для всех корней это чтобы все коэффицента в $\varphi(s)$ были бы положительными. Если хотя бы один коэффицент будет отрицательным - система будет неустойчивой. Полный ответ на этот вопрос определяется используя таблицу Рауса.
 
 $$
 \begin{matrix} \text{Ряд}\; n:\;\;\;\;\; & 1 & a_2 & a_4 & \cdots
