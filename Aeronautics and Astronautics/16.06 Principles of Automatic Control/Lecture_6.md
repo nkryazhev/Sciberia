@@ -3,6 +3,8 @@
 
 # Time Domain Speciﬁcations:
 
+Временные характеристики
+
 Many control systems are dominated by a second order pair of poles. So look at time response (to step input) of
 
 $$H(s) = \frac{\omega_n^2}{s^2 + 2 \zeta \omega_n s +\omega_n^2 }$$
@@ -77,6 +79,8 @@ e^{- \zeta \omega_n t_s} &\approx 0,01\\
 $$
 
 Note that, in reality, settling time varies discontinuously with $\zeta$, since as damping increases, a peak may decrease from just over 1,01 to just under 1,01, so $t_s$ is drastically reduced.
+
+Помните что, в реальности, время установления непрерывно изменяется скачкообразно в зависимости от разных $\zeta$, если демпфирование увеличевается пик перерегулирования может уменьшиться с более 1,01 до менее 1,01, поэтому $t_s$ может существенно уменьшиться.
 
 ## Желаемое расположение полюсов
 

@@ -57,6 +57,8 @@ $$
 
 The ﬁrst two rows come directly from the polynomial $\varphi(x)$. Each subsequent row is formed by operations on the two rows above:
 
+Первые два ряда берутся напрямую из коэффицентов полинома $\varphi(x)$. Каждый последующий ряд вычисляется на основе двух предшествующих ему рядов:
+
 $$
 \begin{eqnarray}
     b_1 & = & - \dfrac{\begin{vmatrix}
@@ -76,10 +78,17 @@ $$
 
 The number of unstable poles is the number of sign changes in the ﬁrst column of the array.
 
+Количество неустойчивых полюсов это количество смен знаков в первом столбце таблицы.
+
 #### Example:
+Пример
 
 $$\phi(s) = s^3 + 2 s^2 + 3 s + 8$$
+
 The Routh Array is
+
+Таблица Рауса имеет вид
+
 $H_0$ is
 $$
 \begin{matrix} 3: & 1 & 3 & 0
@@ -93,6 +102,8 @@ $$
 First column has two sign changes!
 There are two unstable poles. In fact, the roots are:
 
+Первый столбец имеет две смены знаков, т.е. существует два неустойчивых полюса. Собственно вот корни уровнения.
+
 $$
 \begin{align*}
     -2,2483\\
@@ -103,16 +114,30 @@ $$
 
 **Note:** We can scale any row of the array by a positive constant, and not change the sign of any of the terms. This can simplify the algebra by eliminating fractions.
 
+**Замечание** Мы можем масштабировать любой столбец таблицы с умножая или деля на положительную константу и это не повлияет на знаки элементов таблицы. Такой метод поможет упростить вычисления и избавиться от дробей.
+
 ### Stability vs. Parameter Range
+
+Устойчивость против разброса параметров
+
 It’s much easier to use a calculator or Matlab to ﬁnd roots. So why use Routh?
+
+Кажется что гораздо легче использовать калькулятор, ну или Матлаб для того что бы найти корни. Так зачем там тогда Раус?
 
 Routh allows us to determine symbolically what values of a parameter will lead to stability/instability.
 
-#### Example:
+Критерий Рауса позволяет нам определить символьно(не вычисляя) какие величины параметров влияют на устойчивость/неустойчивость
+
+#### Пример:
+
 For what values of $k$ is the following system stable?
 
-**Solution:**
+Для значений $K$ следующая система будет устойчива?
+
+**Решение:**
+
 The Closed Loop transfer function is:
+Передаточная функция замкнутой системы имеет вид:
 $$
 \begin{eqnarray*}
 T(s) & = & \frac{KG(s)}{1 + KG(s)} = \dfrac{\dfrac{K}{(s + 1)^3}}{1 + \dfrac{K}{(s + 1)^3}} \\
@@ -123,6 +148,8 @@ T(s) & = & \frac{KG(s)}{1 + KG(s)} = \dfrac{\dfrac{K}{(s + 1)^3}}{1 + \dfrac{K}{
 $$
 
 The Routh array is
+
+Таблица Рауса
 
 $$
 \begin{matrix} 3: & 1 & 3 & 0
@@ -135,8 +162,15 @@ For stability, need ﬁrst column to be positive, so that $K < 8$ and $K > -1$.
 If $K < -1$, ﬁrst column is $+ + + -$, so there is $1$ unstable pole.
 If $K > 8$, ﬁrst column is $+ + - +$, so there are $2$ unstable poles.
 
-**Possible  problems:**
-If the ﬁrst element of a row is zero, process fails.
+Для устойчивости системы нужно чтобы первый столбец был весь положителен, это произойдет при $K < 8$ и $K > -1$.
 
-**Solution:** Replace $0$ by $\epsilon$, a small positive number.
+Если $K < -1$, первый столбец имеет $+ + + -$, т.е. одна смена знака значит один неустойчивый полюс. Если $K > 8$, первый столбец имеет $+ + - +$, т.е. здесь два неустойчивых полюса.
+
+**Возможные проблемы:**
+If the ﬁrst element of a row is zero, process fails.
+Если первый элемент ряда равен нулю, весь процес неимеет смысла.
+
+**Решение:** Replace $0$ by $\epsilon$, a small positive number.
 If a whole row is zero, must replace row as explained in the book. This happens whenever there is a complex conjugate pair of roots on the imaginary axis.
+
+Можно заменить $0$ на $\epsilon$ - очень маленькое полодительное число. Если весь ряд равен нулю, нужно заменить ряд как описано в книге (FPE?) Это происходит всякий раз когда присутствует коплексно-сопряженая пара корней на мнимой оси.

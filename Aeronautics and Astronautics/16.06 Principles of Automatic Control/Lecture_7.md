@@ -6,7 +6,7 @@
 
 $$G(s) = \frac{\omega_n^2}{s^2 + 2 \zeta \omega_n s + \omega_n^2}$$
 
-Но что было бы если бы мы имели «ноль» в числителе? Как бы это повлияло на реакцию системы? Представим:
+Но что будет если в числителе появится «нуль»? Как это повлияет на реакцию системы? Представим что:
 
 $$G(s) = \frac{(\alpha s + 1) \omega_n^2}{s^2 + 2 \zeta \omega_n s + \omega_n^2}$$
 
@@ -32,6 +32,9 @@ $$G_0(s) = \frac{1}{s^2 + 2 \zeta s + 1},\;\zeta = 0,5$$
 ![image1](images/7/7.svg)
 
 So a zero (with $α>0$) tends to speed up time response increase overshoot.
+
+Мы видим что нуль (при $α>0$) приводит к ускорению переходного процесса, но увеличивет перерегулирование.
+
 Note that the zero is at root of
 
 $$\alpha s + 1 = 0 \to s = - 1/\alpha$$
@@ -51,10 +54,11 @@ $$\left| - 1/ \alpha \right| \gg \left| \omega_n \right|$$
 ## Неминимально фазовые нули
 
 For technical reasons, a zero in the right half plane are called “non-minimum phase zeros”. They have a funny (undesirable) eﬀect on the response of a system.
-По техническим причинам, нули располженные в правой полуплоскости называют "неминимально фазовыми нулями". Они создают забавны (нежелательный) эффект в реакции системы.
+
+По техническим причинам, нули располженные в правой полуплоскости называют «неминимально-фазовыми» нулями. Они создают забавны (нежелательный) эффект в реакции системы.
 
 For a NMP zero, $\alpha < 0$. So, the step response will be the original step response minus a constant times the derivative:
-Для неминимально фазового нуля, $\alpha < 0$. Поэтому, реакция на ступенчатое воздействие такой системы будетм выглядить как обычная реакция минус константа умноженная на производную.
+Для неминимально-фазового нуля, $\alpha < 0$. Поэтому, реакция на ступенчатое воздействие такой системы будетм выглядить как обычная реакция минус константа умноженная на производную.
 
 
 ![Расположение нулей](images/7/7-non-min-step.svg)
@@ -64,9 +68,14 @@ This results in initial “wrong way” behavior that is very undesirable. Examp
 1.	Space shuttle on approach
 2.	Backing car
 
+В результате мы можем наблюдать как бы "движение в противоположную сторону" в самом начале реакции системы, что очень нежелательно. Примеры неминимально-фазовых систем:
+1. Космический шатл во время посадки
+2. Автомобиль сдающий назад
 
 
 To get a backing car to return to a given line, must make the front end go the wrong way ﬁrst:
+
+Для того чтобы сдающий назал автомобиль вернулся на нужную линию, передную часть нужно сначала отвернуть в другую сторону:
 
 ![Расположение нулей](images/7/7-backing-car.svg)
 
@@ -82,3 +91,5 @@ $$\frac{1}{\alpha} e^{-\frac{t}{\alpha}} \sigma (t)$$
 
 
 So, net eﬀect is that addition of the pole will smooth the original step response, increasing the rise time, and reducing the overshoot,
+
+В общем суммарным эффектом будет то что этот третий дополнительный полюс сгладить оригинальный переходный процесс, увеличит (затянет) время нарастания и снизит перерегулирование,
