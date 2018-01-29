@@ -173,21 +173,27 @@ $$
 G(s) = \frac{1}{s(s+1)}
 $$
 
-find a controller for the unity feedback, discrete-time system, with sample time $T = 0.025$
-sec (40 Hz sampling), with $\omega_c = 10$ r/s, and $PM = 50^\circ$.
+find a controller for the unity feedback, discrete-time system, with sample time $T = 0.025$ sec (40 Hz sampling), with $\omega_c = 10$ r/s, and $PM = 50^\circ$.
+
 First, let’s design for the continuous system
 
 Image 2
 
-Need to add a lead compensator at crossover to get desired PM. Compensator is
+Need to add a lead compensator at crossover to get desired $PM$. Compensator is
+
+$$
+K(s) = 42,15 \frac{1 + s/4,2}{1 + s/24}
+$$
 
 then
 
-3 ways to actually compute Kdpzq:
+$$
+K_d (z) = K (\frac{2}{T} \frac{z - 1}{z + 1})
+$$
+
+3 ways to actually compute $K_d (z)$:
 
 1. Actually do the substitution indicated above (ugh!)
 2. Use the Matlab command
-kd “ c2dpk, 0.025, 1
-tustin1
-q
-3. Map the poles and zeros of Kpsq
+$k_d = c2d(k, 0.025, 'tustin')$
+3. Map the poles and zeros of $K(s)$

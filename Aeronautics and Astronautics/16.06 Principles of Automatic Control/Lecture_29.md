@@ -1,29 +1,34 @@
 <sup>16.6 Principles of Automatic Control | Lecture 29</sup>
 
 
-Digital Control
-At one time, most control systems were implemented using analog devices (operational amplifiers,
-linear circuit elements, etc). Today, most control systems are implemented using
-digital devices (computers, etc.)
-The use of digital devices leads to systems which implement difference equations in discrete
-time rather than differential equations in continuous time. This will require some new tools,
+## Digital Control
+
+At one time, most control systems were implemented using analog devices (operational amplifiers, linear circuit elements, etc). Today, most control systems are implemented using digital devices (computers, etc.)
+
+The use of digital devices leads to systems which implement difference equations in discrete time rather than differential equations in continuous time. This will require some new tools,
 but much will be familiar.
 
-Basic block diagram:
+### Basic block diagram:
 
 Image 1
 
-Basic Components:
-Sampler - Captures value of continuous time signal periodically so that A/D converter can
-read it
-Analog-to-digital (A/D) converter - converts samples continuous signal to discrete (binary
-encoded) signal. Often, 8, 12, or 14 bits.
+#### Basic Components:
 
-Controller - Implemented on a computer, which implements a difference equation, much as
-a continuous-time controller is an implementation of a differential equation on analog
+**Sampler** - Captures value of continuous time signal periodically so that A/D converter can read it
+Дискретизатор
+
+Analog-to-digital (A/D) converter - converts samples continuous signal to discrete (binary encoded) signal. Often, 8, 12, or 14 bits.
+
+Аналого-цифровой преобразователь (АЦП)
+
+Controller - Implemented on a computer, which implements a difference equation, much as a continuous-time controller is an implementation of a differential equation on analog
 components.
+
 Digital-to-analog (D/A) converter - Converts a binary word to an analog signal.
+Цифро-аналоговый преобразователь
+
 Zero Order Hold - Holds a constant value analog signal for one period.
+Экстраполятор нулевого порядка
 
 Discrete Time Control Time line
 
