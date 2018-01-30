@@ -12,6 +12,8 @@ The Routh array is
 
 So the transitions occur at k = 8, -1.Look at locus:
 
+![fig_id](images/13/example.svg "Title Text")
+
 For k = 8,the characteristic equation is
 
 which has roots at
@@ -23,6 +25,8 @@ jω axis crossing
 (see FPE for details)
 
 Example:
+
+![fig_id](images/13/pole-location2.svg "Title Text")
 
 where does locus depart/arrive real axis?
 
@@ -44,11 +48,15 @@ To simplify, want poles at
 
 Look at locus with gain only:
 
+![fig_id](images/13/pole-location3.svg "Title Text")
+
 So gain only doesn’t work - must add lead compensation:
 
 where α < β.
 
 Then rough locus will be
+
+![fig_id](images/13/pole-location4.svg "Title Text")
 
 Must choose α, β, k to make this work.
 
@@ -56,3 +64,5 @@ We have multiple degrees of freedom, so answer is not unique. Let’s ﬁx
 α = 3
 
 to guarantee the real closed-loop pole settles faster than complex poles. Then β must be selected to achieve desired angle condition.
+
+![fig_id](images/13/pole-location5.svg "Title Text")

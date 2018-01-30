@@ -51,7 +51,7 @@ So in the example, increasing kp increases the natural frequency, but reduces th
 
 В этом примере, увеличение $k_p$ увеличит собственную частоту, но уменьшит коэффициент демфирования. Построим зависимость положения полюсов от $k_p$
 
-pic1. increasing kp open loop pole location closed-loop pole location
+![fig_id](images/10/polesP.svg "Title Text")
 
 ## Derivative (D) control
 Дифференциальное управление
@@ -70,11 +70,13 @@ For kpﬁxed, $k_D$ varying, plot of closed-loop pole location is:
 
 Для фиксированного $k_p$, $k_D$ может изменяться как показано на диаграмме расположения полюсов замкнутой системы
 
-pic2\. pole position for $k_D = 0$ pole position for $k_D > 0$ increasing $k_D$
+![fig_id](images/10/polesD.svg "Title Text")
 
 NB: For other G(s), results may vary. Sometimes, it's better to place derivative feedback in the feedback path:
 
 Замечание: Для других $G(s)$ результат может быть другим. Иногда, лучше поместить дифференциальную обратную связь в контур обратной связи (Другое название связь по скорости)
+
+![fig_id](images/10/loopD.svg "Title Text")
 
 
 Why? We get the same pole locations, but no additional zeros to cause additional overshoot. Another way to think about this is that we want the derivative eﬀect on y, because that adds damping, but we don't want to diﬀerentiate the reference.
@@ -94,18 +96,45 @@ Example: Suppose we want a system that
 
 1.  Has rise time above $t_r = 1\:s$
 2.  Has peak overshoot of $M_p = 0,05$
-3.  Has zero steady-state error to step command Let's do one piece at a time: Characteristic equation is
+3.  Has zero steady-state error to step command
 
-1.  Has rise time above $t_r = 1\:s$
-2.  Has peak overshoot of $M_p = 0,05$
-3.  Has zero steady-state error to step command Let's do one piece at a time: Characteristic equation is
+Let's do one piece at a time:
+
+![fig_id](images/10/loop3.svg "Title Text")
+
+
+Characteristic equation is
+
 
 So can only change ωn (and indirectly, $ζ$) with kp. for $t_r = 1$, need
 
-So let's take $k_p = 2$ for simplicity. Then To get $Mp = 5%$, need $ζ = 0,7$. So add derivative control. Characteristic Equation is The desired polynomial is
+So let's take $k_p = 2$ for simplicity. Then To get $Mp = 5%$, need $ζ = 0,7$. So add derivative control. Characteristic Equation is
+
+The desired polynomial is
 
 So take $k_D = 1,8$.
 
-If PD control is in forward loop, and the peak overshoot will be 16%, not 5%. So instead, use control structure (˚) = "mirror loop feedback" With this structure, we have:
+If PD control is in forward loop,
 
-So let's add integral control: Take $k_I = 0,25$ (_trust me!_) Then Response sort of meets specs: The response has a long tail, due to slow pole – poles are at: ^ slow pole causes long tail.
+and the peak overshoot will be 16%, not 5%. So instead, use control structure
+
+![fig_id](images/10/loop4.svg "Title Text")
+
+ (˚) = "mirror loop feedback"
+
+ With this structure, we have:
+
+So let's add integral control:
+
+![fig_id](images/10/loop5.svg "Title Text")
+
+ Take $k_I = 0,25$ (_trust me!_) Then
+
+ Response sort of meets specs:
+
+![fig_id](images/10/step.svg "Title Text")
+
+ The response has a long tail, due to slow pole – poles are at:
+
+
+  ^ slow pole causes long tail.

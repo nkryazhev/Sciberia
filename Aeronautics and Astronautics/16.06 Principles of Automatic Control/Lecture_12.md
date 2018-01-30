@@ -8,8 +8,7 @@
 To the left of the pole, φ = 180˝
 To the left of a zero, Ψ = 180˝.
 
-s to the right of the pole
-s to the left of the pole
+![fig_id](images/12/root-locus-rules.svg "Title Text")
 
 To the right of a pole, φ = 0^0 To the right of a zero, Ψ = 0^0. So,
 
@@ -53,3 +52,5 @@ and the angle(s) of arrival of a branch at a zero of multiplicity q is given by
 where the sum sum()˚ excludes to poles (or zeros) at the point of interest.
 
 Example:
+
+![fig_id](images/12/example.svg "Title Text")

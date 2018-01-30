@@ -3,7 +3,7 @@
 ## The Nyquist Stability Criterion
 Can apply the argument principle to finding the stability of the closed loop system
 
-Image 1
+![fig_id](images/21/closed-loop.svg "Title Text")
 
 The closed loop transfer function is
 
@@ -15,7 +15,8 @@ of the closed loop system:
 
 Stability Test, Version1:
 Define the contour C1 as shown below:
-Image 2
+
+![fig_id](images/21/pole-location.svg "Title Text")
 
 The contour encloses (in the limit) the entire right half plane. For this contour, plot the
 contour map
@@ -47,19 +48,19 @@ stable, as in root locus.
 
 Examples
 
-Image 3
+![fig_id](images/21/closed-loop2.svg "Title Text")
 
 Root locus:
 
-Image 4
+![fig_id](images/21/pole-location2.svg "Title Text")
 
 Bode plot:
 
-Image 5-6
+![fig_id](images/21/bode.svg "Title Text")
 
 Nyquist plot:
 
-Image 7
+![fig_id](images/21/root-locus.svg "Title Text")
 
 Note that the Nyquist plot does not encircle ´1, and therefore the number of unstable closed
 loop poles is
@@ -76,11 +77,11 @@ For k ă ´1, N “ 1, so there is one unstable pole.
 
  Example:
 
- Image 8
+![fig_id](images/21/closed-loop3.svg "Title Text")
 
  The Nyquist plot is:
 
-Image 9
+![fig_id](images/21/root-locus2.svg "Title Text")
 
 For ´1{k ă ´1{8 p0 ă k ă 8q, system is stable.
 

@@ -7,11 +7,11 @@ Second-order term: Usually in denominator:
 This is plotted much like first-order term, except slope in high-frequency regime is -2 (-40
 dB/dec).
 
-Image 1-2
+![fig_id](images/19/bode.svg "Title Text")
 
 How rapid is phase change?
 
-Image 3
+![fig_id](images/19/pole-location.svg "Title Text")
 
 Magnitude changes from ?
 1 to 1 to ?

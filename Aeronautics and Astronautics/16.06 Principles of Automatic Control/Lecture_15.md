@@ -34,7 +34,7 @@ Rewrite the transfer function as
 
  Look at the feedback loop using only proportional gain1:
 
-Image 1
+![fig_id](images/15/control-system.svg "Title Text")
 
 So the characteristic equation is:
 
@@ -74,7 +74,7 @@ Example
 
 0˝ locus:
 
-Image 2
+![fig_id](images/15/pole-location.svg "Title Text")
 
 Note:
 • Locus looks familiar but is different

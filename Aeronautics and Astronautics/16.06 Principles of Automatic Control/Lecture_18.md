@@ -8,11 +8,11 @@ To plot 1 ` s{a term, note that
 Example:
 Kpsq “ 1 ` s{20
 
-Image 1
+![fig_id](images/18/bode.svg "Title Text")
 
 What about the phase?
 
-Image 2
+![fig_id](images/18/bode2.svg "Title Text")
 
 That is, the phase varies by 90˝over the frequency range p a , 5aq. 5
 Some people find it easier to draw the construction lines with breakpoints at a{10, 10a.
@@ -20,13 +20,13 @@ Some people find it easier to draw the construction lines with breakpoints at a{
 • Less phase error
 • Middle segment is not technically an asymptote anyway
 
-Image 3
+![fig_id](images/18/bode3.svg "Title Text")
 
 For K “ 1`
 1
 s{a , the above magnitude and phase plots are flipped about |K| “ 1 or =K “ 0˝
 
-Image 4, 5
+![fig_id](images/18/bode4-5.svg "Title Text")
 
 Bode Rules:
 Rule 1: Manipulate the transfer function into Bode form.
@@ -50,4 +50,16 @@ The magnitude break points are
 
 The phase break points are
 
-image 6-12
+![fig_id](images/18/log-grid.svg "Title Text")
+
+![fig_id](images/18/log-grid1.svg "Title Text")
+
+![fig_id](images/18/log-grid2.svg "Title Text")
+
+![fig_id](images/18/log-grid3.svg "Title Text")
+
+![fig_id](images/18/log-grid4.svg "Title Text")
+
+![fig_id](images/18/log-grid5.svg "Title Text")
+
+![fig_id](images/18/log-grid6.svg "Title Text")

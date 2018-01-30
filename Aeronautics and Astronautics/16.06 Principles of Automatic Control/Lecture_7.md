@@ -89,7 +89,11 @@ The new step response will be the convolution of the step response without the a
 
 $$\frac{1}{\alpha} e^{-\frac{t}{\alpha}} \sigma (t)$$
 
+![Переходной процесс с доп полюсом](images/7/sdada.svg)
+
 
 So, net eﬀect is that addition of the pole will smooth the original step response, increasing the rise time, and reducing the overshoot,
 
 В общем суммарным эффектом будет то что этот третий дополнительный полюс сгладить оригинальный переходный процесс, увеличит (затянет) время нарастания и снизит перерегулирование,
+
+![Переходной процесс с доп полюсом](images/7/lastone.svg)

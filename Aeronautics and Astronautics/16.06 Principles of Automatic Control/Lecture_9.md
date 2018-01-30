@@ -6,9 +6,8 @@ Consider a typical unity feedback control system
 
 Рассмотрим типовую систему управления с единичной обратной связью
 
-pic1.
-disturbance
-sensor noise
+![Типовая система управления](images/9/example-control-system.svg)
+
 
 $e'$  is the error perceived by the control system; e is the actual error.  The important transfer functions  are
 
@@ -72,6 +71,8 @@ Consider a unity feedback system without sensor noise or disturbance:
 
 Рассмотрим систему управления с единичной обратной связью без шумов датчиков и внешних возмущений.
 
+![Система с единичной обратной связью](images/9/unity-control-system.svg)
+
 For stability, deﬁne
 Для устойчиваости примем
 
@@ -79,6 +80,8 @@ $$L(s) = K(s) G(s) = \text{"Loop Gain"}$$
 
 What is the steady-state error to a unit step input?
 Какова установившаяся ошибка системы при ступенчатом воздействии?
+
+![Переходный процесс с установившейся ошибкой](images/9/step.svg)
 
 Use LTs:
 Используем преобразование Лапласа

@@ -4,7 +4,7 @@
 ## Bode Plots With Complex Poles
 Suppose we have a proportional feedback system:
 
-Image 1
+![fig_id](images/20/closed-loop.svg "Title Text")
 
 What values of k will lead to instability? Before we answer that, let’s find out what values
 lead to neutral stability. Take, as an example,
@@ -13,13 +13,13 @@ Using root locus and Routh, we can deduce that the C.L. system is stable for
 
 The root locus diagram is:
 
-Image 2
+![fig_id](images/20/root-locus.svg "Title Text")
 
 
 So neutral stability occurs for k “ 2, corresponding to closed-loop poles at ω “ ˘1.
 This result may be seen clearly on the Bode plot for this system.
 
-Image 3-4
+![fig_id](images/20/bode.svg "Title Text")
 
 Recall that the root locus condition is that
 kG = 1
@@ -57,15 +57,15 @@ Cauchy’s Principle of the Argument, or simply the argument principle.
 The Argument Principle
 Consider a transfer function H1psq with pole/zero diagram
 
-Image 5
+![fig_id](images/20/pole-location.svg "Title Text")
 
 We are going to evaluate H1psq point-by-point around the contour C1 :
 
-Image 6
+![fig_id](images/20/pole-location2.svg "Title Text")
 
 At each point on the contour, we calculate H1psq and plot:
 
-Image 7
+![fig_id](images/20/pole-location3.svg "Title Text")
 
 At any point, say s0, the phase of H1ps0q is
 
@@ -73,7 +73,7 @@ As we go around the contour (in this example), each Ψi and φi increases and de
 returns to its original value after completing exactly one circuit.
 Consider a second example, H2 :
 
-Image 8-9
+![fig_id](images/20/pole-location4-5.svg "Title Text")
 
 In this case, as we move once around C1, Ψi, Ψ2, and φ1 return to their original values,
 but φ2 decreases by a net 360˝. As a result, α “ =H2 increases by a net 360˝. But this is

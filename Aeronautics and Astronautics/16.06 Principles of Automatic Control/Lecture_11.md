@@ -10,9 +10,11 @@
 
 Рассмотрим систему управления вида
 
-**diag**
+![fig_id](images/11/example-control-system.svg "Title Text")
 
 If both K(s) and G(s) are rational, then the loop gain may be expressed as
+
+Если $K(s)$ и $G(s)$ рациональные числа, то добротность контура может быть выражена таким образом
 
 $$
 K(s)G(s) = kL(s)
@@ -32,6 +34,8 @@ n(s) &= s^m + b_1 s^{m-1} + \ldots + b_m\\
 $$
 
 Then the roots of the closed-loop system occur at:
+
+
 
 $$
 1 + K(s)G(s) = 0  \tag{$\star$}
@@ -57,8 +61,9 @@ $$
 
 The root locus is the set of values $s$ for which ($\star$) holds, and $k$ is any positive real value. (For reasons that will become clear later, this is the definition of the _positive_ or _180 degree_ locus. Will later define the _negative_, or _0 degree_ locus.)
 
-Пример:
+**Пример:**
 
+![fig_id](images/11/example2.svg "Title Text")
 
 В этом случае,
 
@@ -79,15 +84,25 @@ $$
 
 Because characteristic equation is quadratic, we can find the roots using the quadratic for­mula:
 
+Поскольку характерстическое уравнение это просто квадратное уравнения мы можем найти корни с помощью вычисления дискреминанта
+
 $$
 s = - \frac{1}{2} \pm \frac{\sqrt{1 - 4k}}{2}
 $$
 
 When $0 \leq k \leq \frac{1}{4}$, the roots are real, and between $-1$ and $0$. For $k>\frac{1}{4}$, the roots are complex, with real part $-\frac{1}{2}$ , and imaginary part that increases (asymptotically) as $\sqrt{k}$.
 
+Когда $0 \leq k \leq \frac{1}{4}$, корни вещественны и лежат между $-1$ и $0$. При $k>\frac{1}{4}$, уравнение имеет комплексные корни, с вещественной частью  $-\frac{1}{2}$ и мнимой которая стремятся(асимптотически) к $\sqrt{k}$
+
+![fig_id](images/11/pole-location.svg "Title Text")
+
 Suppose our goal is to choose $k$ so that $\zeta = \sin \theta = 0.5 \Rightarrow\theta = 30^\circ$.
 
+Допустим наша цель это подобрать такое $k$ что $\zeta = \sin \theta = 0.5 \Rightarrow\theta = 30^\circ$
+
 Looking at the geometry in the figure, the imaginary part is
+
+
 
 $$
 \begin{align*}
@@ -104,12 +119,15 @@ $$
 
 Построить корневой годограф для системы
 
+![fig_id](images/11/example3.svg "Title Text")
 
 В этом случае
 
 Характеристиеское уравнение имеет вид
 
 Because the polynomial is cubic, we can’t find the roots (easily) in closed form. Nevertheless, can sketch the root loci using root loci sketching rules
+
+![fig_id](images/11/pole-location2.svg "Title Text")
 
 Немного практики и вы научитесь строить корневые годографы очень быстро.
 
@@ -125,6 +143,8 @@ This is the root locus phase condition, and the reason we call the locus for k >
 180^0 locus.
 
 Consider the example above:
+
+![fig_id](images/11/pole-location3.svg "Title Text")
 
 The phase of L(s) is given by
 

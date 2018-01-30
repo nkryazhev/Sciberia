@@ -134,6 +134,8 @@ For what values of $k$ is the following system stable?
 
 Для значений $K$ следующая система будет устойчива?
 
+![пример системы управления](images/8/control-system.svg)
+
 **Решение:**
 
 The Closed Loop transfer function is:

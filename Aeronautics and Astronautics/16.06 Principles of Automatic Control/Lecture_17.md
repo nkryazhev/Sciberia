@@ -8,7 +8,7 @@ The Bode (magnitude) plot is as shown in figure below.
 
 Note: See FPE Figure 6.3
 
-Image 1
+![fig_id](images/17/bode.svg "Title Text")
 
 We’ll say more on Bode plot construction later. For now, a few importnat points:
 •	 The magnitude of the resonant peak is Mr
@@ -18,13 +18,13 @@ damping.
 •	 uency at which |Hpωq| “ 0.707 |Hp0q|
 For a given unity-feedback control system
 
-Image 2
+![fig_id](images/17/closed-loop.svg "Title Text")
 
 what will closed-loop transfer function
 
 look like?
 
-Image 3
+![fig_id](images/17/bode2.svg "Title Text")
 
 We can consider three regimes
 1. Low frequency: |KG| " 1
@@ -65,6 +65,6 @@ The K0sα term is plotted as a straight line, since
 
 For example, plot magnitude of 10{s2 :
 
-Image 4
+![fig_id](images/17/bode3.svg "Title Text")
 
-To plot 1 ` s{a term, note that 
+To plot 1 ` s{a term, note that

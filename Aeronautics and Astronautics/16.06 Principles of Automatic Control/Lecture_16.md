@@ -31,7 +31,7 @@ One disadvantage:
 
 Consider an LTI system G with input u and output y:
 
-Image 1
+![fig_id](images/16/open-loop.svg "Title Text")
 
 If the input is uptq “ est, then a particular solution is:
 
@@ -66,7 +66,7 @@ Traditionally, |G| is plotted on a log-log plot, =G on a semilog plot, together 
 
 Example:
 
-Image 2(bode)
+![fig_id](images/16/bode.svg "Title Text")
 
 Notes:
 • Low-frequency magnitude = 1 = K(0)
@@ -78,4 +78,4 @@ magnitude in decibels=20 log10 |G|
 Visualization using Root Locus plane
 In root locus form, the lead compensator is
 
-Image 3
+![fig_id](images/16/pole-location.svg "Title Text")
