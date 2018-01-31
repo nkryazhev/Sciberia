@@ -15,16 +15,17 @@ The Nichols chart template is shown below. Usually, we are interested in the ran
 frequencies where the phase is greater than ´180˝. The Nichols chart is often expanded (see
 plot below).
 
-Image 1
+![fig_id](images/28/nichols-template.svg "Title Text")
 
-Image 2
+
+![fig_id](images/28/nichols-template2.svg "Title Text")
 
 The Nichols chart was once very useful, since computers were not available to do the kids of
 calculations that are now done by e.g., Matlab.
 However, Nichols chart may be used to give insight into the closed-loop behavior of systems.
 Consider first the system
 
-Image 3
+![fig_id](images/28/unity.svg "Title Text")
 
 where
 
@@ -35,12 +36,12 @@ G1 “
 sp1 ` s{10q
 Bode of G1:
 
-Image 4
+![fig_id](images/28/bode.svg "Title Text")
 
 The Nichols plot can be made by lifting points of the Bode plot, at individual frequencies,
 and plotting on the Nichols chart. See plot below for the plot of G1 :
 
-Image 5
+![fig_id](images/28/nichols-chart.svg "Title Text")
 
 Note that ωr « ωc, so the peak in the frequency response (CL) is very close to crossover.
 Note also that
@@ -54,18 +55,17 @@ in a similar unity feedback control. For this system, we have
 
 Bode plot:
 
-Image 6
+![fig_id](images/28/bode2.svg "Title Text")
 
 Since the crossover and phase margin are the same, we expect to get similar performance.
 Do we?
 One clue can be seen in the Nichols chart, below.
 
-Image 7
+![fig_id](images/28/nichols-chart2.svg "Title Text")
 
 Note that, in this case, ωr is significantly smaller than ωc, and Mr is larger than might be expected from the PM. So we would expect that the closed-loop system
 
 
-Image 8
 
 would be a bit slower, and have more overshoot, than the system
 
@@ -73,7 +73,7 @@ even though they have the same PM and ωc.
 In fact, this is the case, as seen from the step responses below.
 
 
-Image 9
+![fig_id](images/28/step.svg "Title Text")
 
 Counting Encirclements on a Nichols Chart
 Counting encirclements on a Nichols chart can be tricky, because
@@ -85,13 +85,15 @@ Example 1.
 
 Nyquist and Nichols plots are shown below
 
-Image 10
+![fig_id](images/28/n-n-plot.svg "Title Text")
 
-Image 11
+![fig_id](images/28/n-n-plot2.svg "Title Text")
 
 Example 2
-Image 12
+
+![fig_id](images/28/pole-location.svg "Title Text")
 
 Nichols chart is shown below. Note that care must be used to properly close contour near
 ω “ 0.
-Image 13
+
+![fig_id](images/28/nichols-chart3.svg "Title Text")

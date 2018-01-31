@@ -30,9 +30,9 @@ Kpsq for the continuous system and Kdpsq for the discrete system are different -
 different DC gains and different lag ratios. As a result, the Bode plots for the loop gains are
 significantly different (see the plot below).
 
-Image 1
+![fig_id](images/32/step.svg "Title Text")
 
-Image 2
+![fig_id](images/32/bode.svg "Title Text")
 
 
 Discrete Design
@@ -67,7 +67,7 @@ So we want the dominant closed-loop poles at
 
 Proportional gain does not work, since the locus is
 
-Image 1
+![fig_id](images/32/root-locus.svg "Title Text")
 
 
 which is entirely outside the unit circle. Instead, use a PD controller, which will be of the
@@ -75,7 +75,7 @@ form
 
 So new root locus will be:
 
-Image 2
+![fig_id](images/32/root-locus2.svg "Title Text")
 
 Choose α to get angle condition right
 
@@ -89,4 +89,4 @@ The step response is shown below. Notice that the overshoot is significant - muc
 would be expected with ζ “ 0.707, due to zero of the compensator.
 So let’s put derivative term in a minor loop:
 
-Image 3
+![fig_id](images/32/step2.svg "Title Text")

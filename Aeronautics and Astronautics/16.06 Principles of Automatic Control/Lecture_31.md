@@ -28,7 +28,7 @@ Note that
 
 Why is discrete worse?
 
-Image 1
+![fig_id](images/31/step.svg "Title Text")
 
 Look at Bode plots of GK, GdKd below. The magnitude plots agree well out to 50 r/s, well
 beyond ωc “ 10 r/s. However, the phase plots are significantly different, even at ωc. At ωc,
@@ -37,16 +37,16 @@ increased overshoot.
 To see where the phase comes from, look at Bode plot of G, Gd and K, Kd separately. Note
 that at ωc “ 10 r/s, almost all the additional phase comes from the discretization of G1, not K
 
-Image 2
+![fig_id](images/31/bode.svg "Title Text")
 
-Image 3
+![fig_id](images/31/bode2.svg "Title Text")
 
-Image 4
+![fig_id](images/31/bode3.svg "Title Text")
 
 The phase lag in Gd is due to the effect of the zero order hold. To see why, consider sampling
 then holding a sinusoidal signal:
 
-Image 5
+![fig_id](images/31/sampling.svg "Title Text")
 
 Note that the reconstructed signal is delayed by about 1{2 the sample period, so there is an
 additional phase lag of ωT{2. At crossover, this lag is
@@ -71,4 +71,4 @@ Convert to discrete time by hand or by Matlab c2d to obtain
 
 See step response below.
 
-Image 6
+![fig_id](images/31/step2.svg "Title Text")

@@ -107,7 +107,10 @@ $$
 z = e^{(-\zeta\omega_n + j \sqrt{1 - \zeta^2 \omega_n})T}
 $$
 
-Image 1
+
+![fig_id](images/30/natural-freqency-vs-damping.jpg "Title Text")
+
+
 
 Observations:
 1. The stability boundary is $|z| = 1$.
@@ -177,7 +180,7 @@ find a controller for the unity feedback, discrete-time system, with sample time
 
 First, let’s design for the continuous system
 
-Image 2
+![fig_id](images/30/bode.svg "Title Text")
 
 Need to add a lead compensator at crossover to get desired $PM$. Compensator is
 

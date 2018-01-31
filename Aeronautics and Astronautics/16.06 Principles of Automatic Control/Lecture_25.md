@@ -6,13 +6,13 @@ use lead compensator
 
 What is the strategy? Look at Bode plot:
 
-Image 1
+![fig_id](images/25/bode.svg "Title Text")
 
 To get most phase lead for given lead ratio pb{aq, place pole and zero symmetrically around
 desired crossover. This maximizes average slope near crossover.
 The magnitude and phase of a lead compensator are
 
-Image 2
+![fig_id](images/25/bode2.svg "Title Text")
 
 The phase of the lead compensator is
 
@@ -43,7 +43,7 @@ Then the control system has
 So need to add lead compensation to increase PM.
 Bode:
 
-Image 3
+![fig_id](images/25/amplitude.svg "Title Text")
 
 To get better slope at crossover, add lead compensator. It’s convenient to place zero at
 s “ ´1, since this cancels plant pole, and makes Bode plot simpler. Working out the
@@ -70,4 +70,4 @@ Using Matlab, found
  DONE! The step response is shown in the figure below. Note that Mp is larger than would
 be expected (« 37%) given the PM. This is typical of systems with modest kp.
 
-Image 4
+![fig_id](images/25/step.svg "Title Text")

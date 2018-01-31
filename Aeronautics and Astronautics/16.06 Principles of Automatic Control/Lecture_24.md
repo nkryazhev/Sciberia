@@ -42,7 +42,7 @@ So let’s try
 
 What must loop look like?
 
-Image 1
+![fig_id](images/24/amplitude.svg "Title Text")
 
 To get PD correct, need 60˝ phase lead from PD zero,
 
@@ -52,7 +52,7 @@ To get 60˝at ωc, need
 
 If we use unit gain, what is |KG| at crossover? Using straight line
 
-Image 2
+![fig_id](images/24/amplitude2.svg "Title Text")
 
 Using exact expressions,
 
@@ -64,4 +64,4 @@ Part of the problem is that phase lag increases below crossover, increasing Mr, 
 the peak overshoot. This will hopefully become a bit clearer when we do the Nichols plot.
 Could fix by increasing PM to « 80˝.
 One problem with PD controller is that the gain is infinite at high frequencies. So instead
-use lead compensator 
+use lead compensator

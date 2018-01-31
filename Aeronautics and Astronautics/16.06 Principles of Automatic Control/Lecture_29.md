@@ -10,7 +10,7 @@ but much will be familiar.
 
 ### Basic block diagram:
 
-Image 1
+![fig_id](images/29/discrete-system.svg "Title Text")
 
 #### Basic Components:
 
@@ -32,7 +32,7 @@ Zero Order Hold - Holds a constant value analog signal for one period.
 
 Discrete Time Control Time line
 
-Image 2
+![fig_id](images/29/discrete-timeline.svg "Title Text")
 
 If the control computer is dedicated to a single task, then T is made as short as possible,
 and δ “ T.

@@ -13,7 +13,7 @@ Also, need to map crossover frequency:
 24%. So for most problems, may not need to prewarp.
 Bode plot of G:
 
-Image 1
+![fig_id](images/34/bode.svg "Title Text")
 
 To meet specs, need lead around νc “ 51, lag below ν “ 5.1.
 
@@ -46,12 +46,12 @@ Use lead compensator to get desired PM and crossover
 
 See step response below
 
-Image 2
+![fig_id](images/34/step.svg "Title Text")
 
 Direct Design
 Suppose we have the usual unity feedback control structure:
 
-Image 3
+![fig_id](images/34/unity.svg "Title Text")
 
 (The system might be continuous or discrete). Suppose we want the closed loop transfer
 function
@@ -86,12 +86,12 @@ Then
 See responses on next two pages. Note the “ringing” in urks. To eliminate, put zero of H at
 ´0.9867.
 
-Image 4
+![fig_id](images/34/step2.svg "Title Text")
 
-Image 5
+![fig_id](images/34/step3.svg "Title Text")
 
 To eliminate ringing, choose
 
-Image 6
+![fig_id](images/34/step4.svg "Title Text")
 
-Image 7
+![fig_id](images/34/step5.svg "Title Text")

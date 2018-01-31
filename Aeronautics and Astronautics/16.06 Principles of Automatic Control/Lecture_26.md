@@ -6,7 +6,7 @@ From last time, we had plant and compensator
 The closed-loop step response has 45% overshoot, when 37% expected. Why?
 Look at Bode plot of H “ KG : p1`KGq
 
-Image 1
+![fig_id](images/26/amplitude.svg "Title Text")
 
 Because of low Kp, D.C. gain of H is 0.9, which increases effective Mr by factor of 1/0.9.
 
@@ -15,7 +15,7 @@ Consider the plant
 
 In a unity feedback control system
 
-Image 2
+![fig_id](images/26/unity.svg "Title Text")
 
 
 Suppose we use a proportional controller
@@ -30,13 +30,14 @@ velocity constant Kv “ 14.1 is lower than desired (Kv “ 100). How might we i
 response?
 Look at Bode plot:
 
-Image 3
+![fig_id](images/26/amplitude2.svg "Title Text")
 
 
 Placing Kv constrain on Bode plot shows that we must somehow make slope steeper for a
 bit to achieve the requirement, if we want crossover behavior to be similar. We do this with
 a lag compensator:
-Image 4
+
+![fig_id](images/26/bode.svg "Title Text")
 
 On order to achieve our design goals, we need the lag ratio a{b to be the amount of additional
 low frequency gain required. In our case,
@@ -52,14 +53,14 @@ So the new Compensator is
 How well does the new compensator work? Compare step responses, error response to ramp
 inputs (see plots).
 
-Image 4
+![fig_id](images/26/step.svg "Title Text")
 
-Image 5
+![fig_id](images/26/step2.svg "Title Text")
 
 Note that although the steady-state error to a ramp input is reduced, there is a long tail to
 the response. Why? Look at Root locus:
 
-Image 6
+![fig_id](images/26/root-locus.svg "Title Text")
 
 Long time constant pole near zero.
 Pole has small residue, but a long
@@ -73,14 +74,14 @@ PI (proportional-integral control) is used when the type of the system must be i
 say, from type 0 to type 1.
 Example: Consider a system that performs adequately with unity feedback
 
-Image 7
+![fig_id](images/26/unity2.svg "Title Text")
 
 where
 
 but we desire a type 1 system with velocity constant Kv “ 100. Look at problem on Bode
 plot:
 
-Image 8
+![fig_id](images/26/amplitude3.svg "Title Text")
 
 So the compensator is
 

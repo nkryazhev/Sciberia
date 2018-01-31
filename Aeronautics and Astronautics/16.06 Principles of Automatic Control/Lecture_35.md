@@ -22,7 +22,7 @@ the closed-loop poles associated with the oscillator will be at
 
 where T is large, compared to 1{Ω.
 
-Image 1
+![fig_id](images/35/pole-location.svg "Title Text")
 
 
 For a given Gpsq, how do we get poles at desired location?
@@ -43,6 +43,4 @@ Example:
 
  Root locus
 
- Image 2
-
- 
+ ![fig_id](images/35/root-locus.svg "Title Text")

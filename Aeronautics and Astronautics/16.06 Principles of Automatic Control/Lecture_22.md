@@ -5,15 +5,15 @@ Consider
 
 Because of pole at s “ 0, must deform “D contour” pC1q.
 
-Image 1
+![fig_id](images/22/pole-location.svg "Title Text")
 
 Bode:
 
-Image 2-3
+![fig_id](images/22/bode.svg "Title Text")
 
 Nyquist:
 
- Image 4
+![fig_id](images/22/root-locus.svg "Title Text")
 
  Note that deformation in contour (small semicircle in C1) maps to large semicircle in GpC1q.
 Since there are no open loop poles inside C1, the number of closed loop poles is
@@ -33,19 +33,19 @@ So the diagram is asymptotic to 1 ´ 2
 Nyquist Plot of Open Loop Unstable System
 Now consider the proportional control of an unstable system:
 
-image 5
+![fig_id](images/22/closed-loop.svg "Title Text")
 
 The root locus:
 
-Image 6
+![fig_id](images/22/root-locus2.svg "Title Text")
 
 Bode:
 
- Image 7
+ ![fig_id](images/22/bode2.svg "Title Text")
 
  Nyquist diagram:
 
-Image 8
+![fig_id](images/22/root-locus3.svg "Title Text")
 
 Note that arc at 8 is clockwise, because deformation at s “ 0 around pole is counterclockwise.
 

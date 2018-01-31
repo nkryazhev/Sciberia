@@ -1,7 +1,7 @@
 <sup>16.6 Principles of Automatic Control | Lecture 33</sup>
 
 
-Image 1
+![fig_id](images/33/discrete-system.svg "Title Text")
 
 Note that
 
@@ -10,7 +10,7 @@ is
 
 very close to the ideal Mp “ 0.043 for ζ “ 0.7071.
 
-Image 2
+![fig_id](images/33/step.svg "Title Text")
 
 Discrete Design vs. Emulation
 The text argues that discrete design should be used if
@@ -49,4 +49,4 @@ gw=d2c ( gd , ’ t u s ti n ’ )
 Result is
 
 Zero at W “ ´30, 000 can be ignored, but note presence of RHP zero at W “ `200.
-Alternatively, map poles and zeros by 
+Alternatively, map poles and zeros by

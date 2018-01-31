@@ -14,13 +14,13 @@ can we do?
 
 Bode plot:
 
-Image 1
+![fig_id](images/27/amplitude.svg "Title Text")
 
 The slope at high frequency is ´1, so it seems that we should be able to cross-over anywhere.
 However, in this case we need to look at the phase plot, sicne gain-phase theorem does not
 apply:
 
-Image 2
+![fig_id](images/27/phase.svg "Title Text")
 
 Note that additional phase due to zero at s “ `10 is negative.
 
@@ -30,7 +30,7 @@ Let’s add compensation to make slope ´1 everywhere:
 
 Bode Plot:
 
-Image 3
+![fig_id](images/27/bode.svg "Title Text")
 
 So NMP zero causes significant phase lag (relative to the phase expected from slope) at
 
@@ -42,11 +42,11 @@ Solve for k:
 
 Therefore,
 
-Image 4
+![fig_id](images/27/pole-location.svg "Title Text")
 
 See step response plotted below:
 
- Image 5
+![fig_id](images/27/step.svg "Title Text")
 
 
 Note that Mp « 49%.
@@ -76,7 +76,7 @@ Example:
 
 Bode:
 
-Image 6
+![fig_id](images/27/bode2.svg "Title Text")
 
 Using arguments similar to those made for NMP zeros, can see that we need to crossover at
 least at

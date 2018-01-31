@@ -13,18 +13,18 @@ system is to instability, but also because they (but especially the PM) can be u
 the transient behavior of the closed-loop system.
 Gain and phase margin on Nyquist diagram:
 
-Image 1
+![fig_id](images/23/root-locus.svg "Title Text")
 
 GM and PM on Bode diagram:
 
-Image 2-3
+![fig_id](images/23/bode.svg "Title Text")
 
 Relationship between PM and damping
 When the phase margin is small, the closed-loop system is close to instability, so that there
 will be closed-loop poles near the jω´axis. That is, low PM ñ low damping ratio.
 This result can be made explicit by considering the closed-loop system
 
-Image 4
+![fig_id](images/23/example-system.svg "Title Text")
 
 The closed-loop transfer function is
 
@@ -35,7 +35,7 @@ Can show that, for this system,
 The functional form isn’t really important - the important point is that ζ is nearly a linear
 function of PM:
 
-Image 5
+![fig_id](images/23/phase-damping.svg "Title Text")
 
 So can often predict (effective) damping ratio using approximation
 PM ζ « (PM in degrees) 100
@@ -58,14 +58,14 @@ Note that this is a funny sort of convolution - we are convolving a weighting fu
 the slope of another function, but working on logarythmic axes!
 The weighting function looks like:
 
-Image 6
+![fig_id](images/23/weighting-func.svg "Title Text")
 
 Note that 92% of area of Wpuq is within ˘1 decade of the center. So the phase is nearly
 completely determined by the slope of M within ~1 decade.
 Why is this result important? It implies that in almost every case, a well-designed control
 loop will have a magnitude plot with slope -1 at the crossovr frequency!
 
-Image 7
+![fig_id](images/23/amplitude.svg "Title Text")
 
 In this case, the phase at cross-over will be a weighted average of ´90˝ (weighted a lot),
-´180˝ (weighted some), and 0˝ (weighted hardly at all). So the phase will be between ´90˝ and ´180˝, with probably reasonable PM. 
+´180˝ (weighted some), and 0˝ (weighted hardly at all). So the phase will be between ´90˝ and ´180˝, with probably reasonable PM.
